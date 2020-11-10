@@ -23,7 +23,6 @@ public class Main {
 
             brItem = new BufferedReader(new FileReader(csvItem));
             brItem.readLine();
-//            brPrice = new BufferedReader(new FileReader(csvPrice));
 
             while ((line = brItem.readLine()) != null) {
 
@@ -47,7 +46,6 @@ public class Main {
             }
         }
         System.out.println("____Inventory Items not Shown Do not have stock____");
-//        getUserInput(counterItem);
     }
 
     public static void getPrice(int getCounter, String getId, String description) {
@@ -60,9 +58,7 @@ public class Main {
         String setIdPrice;
         String setPrice;
 
-
         try {
-
             brPrice = new BufferedReader(new FileReader(csvPrice));
             brPrice.readLine();
 
@@ -87,7 +83,6 @@ public class Main {
             e.printStackTrace();
     }
 }
-
     public static void getQuantity(String getId, String getPrice) {
 
         String csvQuantity = "src/inventory/quantities.csv";
@@ -97,7 +92,6 @@ public class Main {
         String setIdQuantity;
 
         try {
-
             brQuantity = new BufferedReader(new FileReader(csvQuantity));
             brQuantity.readLine();
 
@@ -117,52 +111,6 @@ public class Main {
             e.printStackTrace();
         }
     }
-
-//    public static int getUserInput(int counterMax){
-//        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-//        System.out.println("Enter ID");
-//        int userInput = myObj.nextInt();
-//        if (userInput > 0 && userInput < counterMax) {
-//              // Read user input
-//            System.out.println("ID selected is: " + userInput);  // Output user input
-//            return userInput;
-//        } else{
-//            System.out.println("Enter a value of an ID?");
-//            getUserInput(counterMax);
-//        }
-//        return -1;
-//    }
-//
-//    public static void getInputSearch(int searchInt){
-//        String csvItem = "src/inventory/items.csv";
-//        BufferedReader brItem = null;
-//        BufferedReader brPrice = null;
-//        String line = "";
-//        String cvsSplitBy = ",";
-//
-//        int counterItem = searchInt;
-//        String setIdItem;
-//
-//        try {
-//
-//            brItem = new BufferedReader(new FileReader(csvItem));
-////            brPrice = new BufferedReader(new FileReader(csvPrice));
-//
-//            while ((line = brItem.readLine()) != null) {
-//
-//                String[] item = line.split(cvsSplitBy);
-//                counterItem = counterItem + 1;
-//                setIdItem = item[0];
-//                getPrice(counterItem, setIdItem, item[1]);
-//
-//            }
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
 }
 
 
